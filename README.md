@@ -1,8 +1,11 @@
 🇬🇧 Japanese Learning Helper 
+
 📌 Project Overview
+
 This is a tool for collecting and learning Japanese vocabulary. Users can add unfamiliar Japanese words to the repository, and the system will automatically generate definitions, example sentences, and pronunciations, exporting them as Anki flashcards to aid efficient memorization and review.
 
 ⚙️ Features
+
 Automated Learning Workflow: From collecting words to generating Anki flashcards, the entire process is automated.
 
 Multilingual Support: Supports definitions, example sentences, and pronunciations in both Japanese and Chinese.
@@ -13,6 +16,7 @@ Open Source: All code and data are open source, contributions and improvements a
 
 
 📦 Installation and Usage
+
 1. Clone the Repository:
 
 ```bash
@@ -29,6 +33,7 @@ Add Words:
 ```
 
 3. Add Words:
+
 Add unfamiliar Japanese words to the words.csv file, one word per line.
 
 5. Generate Anki Flashcards:
@@ -48,7 +53,9 @@ Two Ways to Generate Anki Flashcards
 
 1. Automatic Generation from Raw Words (Requires API Access)
 If you have access to the ChatGPT API, you can use the scripts in this repository to automatically call the API, generate detailed definitions and example sentences for your vocabulary, and output Anki flashcard packages (.apkg files).
+
 Advantage: fully automated, suitable for batch processing.
+
 Example command:
 
 ```bash
@@ -56,11 +63,15 @@ python generate_anki.py
 ```
 
 2. Importing Files Generated via ChatGPT Web or Client
-If you do not have API access, you can manually use the ChatGPT web or desktop client to input words and generate the definitions and examples. Then save the results in a specified file format (e.g., CSV or JSON).
+
+If you do not have API access, you can manually use the ChatGPT web or desktop client to input words and generate the definitions and examples. Then save the results in a specified file format (TSV).
+
 Place the generated file into the repository folder and run the import script to create your Anki deck.
+
 Advantage: no API needed, good for small manual operations.
 
 🛠️ Contributing
+
 We welcome contributions to this project:
 
 Fork the Repository: Click the "Fork" button at the top right of the page.
@@ -106,4 +117,5 @@ fields=[
 
 
 📄 License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
