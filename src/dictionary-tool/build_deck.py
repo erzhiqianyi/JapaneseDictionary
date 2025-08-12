@@ -111,13 +111,17 @@ def create_note(word, model):
 
 def start():
     words = read_all_csv_files("../../data/dictionary")
+    unique_word = set()
     model_id = generate_id()
     deck_id = generate_id()
     my_model = create_model(model_id)
     my_deck = create_deck(deck_id)
     for word in words:
-        my_note = create_note(word, my_model)
-        my_deck.add_note(my_note)
+        if not word["漢字"] in unique_word:
+            my_note = create_note(word, my_model)
+            my_deck.add_note(my_note)
+            unique_word.add(word["漢字"])
+    print("total words "+str(len(unique_word)))
     genanki.Package(my_deck).write_to_file('../../data/私の辞書.apkg')
     print("ファイル「私の辞書.apkg」を作成しました。Anki にインポートしてご利用ください。")
 
